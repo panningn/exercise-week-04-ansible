@@ -25,7 +25,7 @@ The following assignment will get you started in writing ansible playbooks. Use 
 ## Resources
 * Github page for cisco IOS ansible https://github.com/ansible-collections/cisco.ios 
 
-## Example of a Paybook that deploy the cisco banner when you SSH into the switch
+## Example of a Playbook that deploys the cisco banner when you SSH into the switch
 * https://github.com/ansible-collections/cisco.ios/blob/main/docs/cisco.ios.ios_banner_module.rst#examples
 
 ```

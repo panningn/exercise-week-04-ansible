@@ -1,0 +1,13 @@
+---
+- name: Configure SNMP
+  hosts: cisco
+  gather_facts: no
+  
+  tasks:
+    - name: Change SNMP
+      cisco.ios.ios_config:
+        commands:
+        - snmp-server community ansible-public ro
+        - snmp-server community ansible-private rw
+        - snmp-server host 192.168.56.83 ansible-public
+        - snmp-server enable traps

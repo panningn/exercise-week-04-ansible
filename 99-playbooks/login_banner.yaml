@@ -9,7 +9,6 @@
       cisco.ios.ios_banner:
         banner: login
         text: |
-          This is my login banner
-          that contains a multiline
-          string
+          This is Nikki's super cool login banner
+          The Hostname of the switch is: {{ inventory_hostname }}
         state: present

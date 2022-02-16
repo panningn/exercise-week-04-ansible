@@ -1,0 +1,12 @@
+---
+- name:  Configure switch interfaces
+  hosts: cisco
+  gather_facts: no
+
+  tasks:
+    - name: Configure interfaces with Loopback IP addresses
+      cisco.ios.ios_l3_interfaces:
+        config:
+        - name: Loopback0
+          ipv4:
+          - address: "1.1.1.{{groups.cisco.index(inventory_hostname)+1}}/32"

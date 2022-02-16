@@ -1,0 +1,11 @@
+---
+- name:  Set Nameservers
+  hosts: cisco
+  gather_facts: no
+
+  tasks:
+    - name: Change Nameservers
+      cisco.ios.ios_config:
+        commands:
+        - ip name-server 8.8.8.8
+        - ip name-server 8.8.8.4

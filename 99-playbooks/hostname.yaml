@@ -1,0 +1,14 @@
+---
+- name: gather information from routers
+  hosts: cisco
+  gather_facts: no
+   
+  tasks:
+  
+    - name: Gather all legacy facts
+      cisco.ios.ios_facts:
+        gather_subset: all
+
+    - name: Display Switch hostname
+      debug:
+        msg: "The Hostname of the switch is {{ansible_net_hostname}}" 
